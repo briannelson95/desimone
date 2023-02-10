@@ -14,7 +14,9 @@ export const youtube = defineType({
     ],
     preview: {
         select: {
-            url: 'url'
-        }
-    }
+            // title: 'media.alt',
+            url: 'url',
+            // media: 'media.image', //adding this makes the image show up in standard preview components
+        },
+    },
 })

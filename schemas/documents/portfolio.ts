@@ -1,17 +1,15 @@
 import { VideoPreview } from '@/components/sanityPreviewComponents';
 import { defineField, defineType } from 'sanity';
 
-export const videos = defineType({
-    name: 'videos',
-    title: 'Videos',
+export const portfolio = defineType({
+    name: 'portfolio',
+    title: 'Portfolio',
     type: 'document',
     fields: [
         defineField({
-            name: 'videos',
-            type: 'array',
-            of: [
-                {type: 'youtube'}
-            ],
+            name: 'allVideos',
+            title: 'All Videos',
+            type: 'videos',
             components: {
                 preview: VideoPreview
             }
