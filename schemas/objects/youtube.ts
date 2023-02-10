@@ -10,6 +10,9 @@ export const youtube = defineType({
             name: 'url',
             type: 'url',
             title: 'YouTube video URL',
+            components: {
+                preview: VideoPreview
+            }
         })
     ],
     preview: {

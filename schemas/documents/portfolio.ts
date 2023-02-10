@@ -10,9 +10,16 @@ export const portfolio = defineType({
             name: 'allVideos',
             title: 'All Videos',
             type: 'videos',
-            components: {
-                preview: VideoPreview
-            }
+            // components: {
+            //     preview: VideoPreview
+            // }
+        }),
+        defineField({
+            name: 'newVideo',
+            type: 'array',
+            of: [
+                {type: 'youtube'}
+            ]
         })
     ],
 })
