@@ -41,6 +41,11 @@ export const page = defineType({
             title: 'Body',
             type: 'blockContent',
         }),
+        defineField({
+            name: 'seo',
+            title: 'Search Engine Optimization',
+            type: 'seo'
+        })
     ],
     preview: {
         select: {

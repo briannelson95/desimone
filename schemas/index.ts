@@ -8,9 +8,13 @@ import blockContent from "./objects/blockContent";
 import { mainImage } from "./objects/mainImage";
 import { youtube } from "./objects/youtube";
 import { portfolio } from "./documents/portfolio";
+import { siteSettings } from "./documents/siteSettings";
+import { contact } from "./objects/contact";
+import { seo } from "./objects/seo";
 
 
 export const schemaTypes = [
+    siteSettings,
     post, 
     author, 
     category, 
@@ -20,5 +24,7 @@ export const schemaTypes = [
     mainImage,
     youtube,
     videos,
-    portfolio
+    portfolio,
+    contact,
+    seo
 ]
