@@ -7,19 +7,15 @@ export const portfolio = defineType({
     type: 'document',
     fields: [
         defineField({
+            name: 'title',
+            title: 'Title',
+            type: 'string',
+            readOnly: true
+        }),
+        defineField({
             name: 'allVideos',
             title: 'All Videos',
             type: 'videos',
-            // components: {
-            //     preview: VideoPreview
-            // }
         }),
-        defineField({
-            name: 'newVideo',
-            type: 'array',
-            of: [
-                {type: 'youtube'}
-            ]
-        })
     ],
 })

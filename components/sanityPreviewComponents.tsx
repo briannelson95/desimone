@@ -20,18 +20,20 @@ export function VideoPreview(props: any) {
     const {url} = props
     const id = getYouTubeID(url)
     const opts: YouTubeProps['opts'] = {
-        height: '390',
-        width: '640',
+        // height: '100',
+        width: '500',
         playerVars: {
-          // https://developers.google.com/youtube/player_parameters
-          autoplay: 1,
         },
     };
   
     return (
-        <YouTube 
-            videoId={id!}
-            opts={opts}
-        />
+        <Flex align="center" justify="center" height="fill">
+            <Card border padding={3}>
+                <YouTube 
+                    videoId={id!}
+                    opts={opts}
+                />
+            </Card>
+        </Flex>
     )
 }

@@ -3,6 +3,7 @@ import {deskTool} from 'sanity/desk'
 import {visionTool} from '@sanity/vision'
 import {schemaTypes} from './schemas'
 import { media } from 'sanity-plugin-media'
+import { myStructure } from './deskStructure'
 
 const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET!
@@ -16,7 +17,9 @@ export default defineConfig({
   dataset,
 
   plugins: [
-    deskTool(), 
+    deskTool({
+      structure: myStructure,
+    }), 
     visionTool(),
     // media(),
   ],

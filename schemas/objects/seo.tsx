@@ -3,7 +3,7 @@ import { defineField, defineType } from 'sanity';
 export const seo = defineType({
     name: 'seo',
     title: 'Search Engine Optimization',
-    type: 'document',
+    type: 'object',
     fields: [
         defineField({
             name: 'title',
