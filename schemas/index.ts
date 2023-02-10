@@ -11,10 +11,12 @@ import { portfolio } from "./documents/portfolio";
 import { siteSettings } from "./documents/siteSettings";
 import { contact } from "./objects/contact";
 import { seo } from "./objects/seo";
+import { homepage } from "./documents/homepage";
 
 
 export const schemaTypes = [
     siteSettings,
+    homepage,
     post, 
     author, 
     category, 

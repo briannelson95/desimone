@@ -13,6 +13,14 @@ export const myStructure = (S: any) =>
                         .documentId("siteSettings")
                 ),
             S.divider(),
+            S.listItem()
+                .title('Homepage')
+                .icon(HomeIcon)
+                .child(
+                    S.editor()
+                        .schemaType("homepage")
+                        .documentId("homepage")
+                ),
             S.documentTypeListItem("pages").title("Pages").icon(DocumentsIcon),
             S.listItem()
                 .title('Portfolio')
@@ -24,6 +32,6 @@ export const myStructure = (S: any) =>
                 ),
             S.divider(),
             ...S.documentTypeListItems().filter(
-                (listItem: any) => !['siteSettings', 'pages', 'portfolio'].includes(listItem.getId())
+                (listItem: any) => !['siteSettings', 'pages', 'homepage', 'portfolio'].includes(listItem.getId())
             )
         ])
