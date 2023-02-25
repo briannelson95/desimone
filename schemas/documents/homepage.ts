@@ -1,3 +1,4 @@
+import { MediaPreview } from '@/components/sanityPreviewComponents';
 import { defineField, defineType } from 'sanity';
 
 export const homepage = defineType({
@@ -21,6 +22,27 @@ export const homepage = defineType({
             type: 'slug',
             fieldset: 'title',
             readOnly: true
+        }),
+        defineField({
+            name: 'featuredImage',
+            title: 'Featured Image',
+            type: 'reference',
+            to: {
+                type: 'mediaLibrary',
+                components: {
+                    preview: MediaPreview
+                }
+            }
+        }),
+        defineField({
+            name: 'body',
+            title: 'Body',
+            type: 'blockContent',
+        }),
+        defineField({
+            name: 'seo',
+            title: 'Search Engine Optimization',
+            type: 'seo'
         })
     ],
 })
