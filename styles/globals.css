@@ -9,3 +9,18 @@ html {
 h1,h2,h3 {
   font-family: var(--font-jsoefin-sans);
 }
+
+@layer base {
+  html {
+    @apply dark:bg-zinc-900 dark:text-white
+  }
+
+
+  h1 {
+    @apply text-5xl
+  }
+
+  h2 {
+    @apply text-3xl
+  }
+}
