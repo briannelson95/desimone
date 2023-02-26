@@ -1,5 +1,6 @@
 import '../styles/globals.css'
 import { Josefin_Sans, Oswald } from '@next/font/google';
+import Script from 'next/script';
 
 const josefinSans = Josefin_Sans({
   subsets: ['latin'],
@@ -21,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${josefinSans.variable} ${oswald.variable}`}>
       <head>
-        <script src="https://www.youtube.com/iframe_api"></script>
+        <Script src="https://www.youtube.com/iframe_api"></Script>
       </head>
 
       <body>{children}</body>
