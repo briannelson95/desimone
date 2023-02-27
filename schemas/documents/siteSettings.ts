@@ -35,6 +35,11 @@ export const siteSettings = defineType({
             ]
         }),
         defineField({
+            name: 'logo',
+            title: 'Logo',
+            type: 'image'
+        }),
+        defineField({
             name: 'youtube',
             title: 'YouTube',
             type: 'url',

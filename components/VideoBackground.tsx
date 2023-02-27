@@ -4,7 +4,7 @@ type Props = {
     videoId: string
 }
 
-const VideoBackground = ({ videoId }: Props) => {
+const VideoBackground = () => {
     return (
         <div 
             className="relative top-0 left-0 h-full w-full z-[-1] overflow-y-hidden"

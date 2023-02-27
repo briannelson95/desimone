@@ -1,6 +1,8 @@
-import '../styles/globals.css'
+import '@/styles/globals.css'
 import { Josefin_Sans, Oswald } from '@next/font/google';
 import Navbar from '@/components/Navbar';
+import { client } from '@/lib/sanity.client';
+import { siteSettings } from '@/lib/queries';
 
 const josefinSans = Josefin_Sans({
   subsets: ['latin'],
@@ -14,15 +16,15 @@ const oswald = Oswald({
   display: 'swap'
 })
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default async function RootLayout({children,}: {children: React.ReactNode}) {
+  const data = await client.fetch(siteSettings);
+  const navigation = data[0].navigation;
+  console.log(data)
+  
   return (
     <html lang="en" className={`${josefinSans.variable} ${oswald.variable}`}>
       <body>
-        <Navbar />
+        <Navbar navigation={navigation} image={data[0].logo} />
         {children}
         </body>
     </html>

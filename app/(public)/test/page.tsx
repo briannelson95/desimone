@@ -1,12 +1,11 @@
 import VideoBackground from '@/components/VideoBackground'
-import YouTubeBackground from '@/components/YouTubeVideoBackground'
 import React from 'react'
 
 export default function page() {
     return (
         <div className=''>
             <div className='relative bg-black/50 h-screen flex flex-col justify-center items-center text-white text-center'>
-                <VideoBackground videoId='pCf4QvfOJ34' />
+                <VideoBackground />
                 
                 <div className='absolute h-screen flex flex-col justify-center items-center text-white text-center'>
                     <h1 className='text-5xl font-extrabold uppercase'>Nicholas Desimone</h1>
