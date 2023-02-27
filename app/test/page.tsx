@@ -9,7 +9,7 @@ export default function page() {
                 <VideoBackground videoId='pCf4QvfOJ34' />
                 
                 <div className='absolute h-screen flex flex-col justify-center items-center text-white text-center'>
-                    <h1 className='text-5xl font-extrabold'>Nicholas Desimone</h1>
+                    <h1 className='text-5xl font-extrabold uppercase'>Nicholas Desimone</h1>
                     <p className='text-xl'>This is a test of the fonts</p>
                 </div>
             </div>
