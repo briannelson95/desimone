@@ -12,6 +12,7 @@ import { siteSettings } from "./documents/siteSettings";
 import { contact } from "./objects/contact";
 import { seo } from "./objects/seo";
 import { homepage } from "./documents/homepage";
+import services from "./objects/services";
 
 
 export const schemaTypes = [
@@ -28,5 +29,6 @@ export const schemaTypes = [
     videos,
     portfolio,
     contact,
-    seo
+    seo,
+    services
 ]

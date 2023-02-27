@@ -40,6 +40,16 @@ export const homepage = defineType({
             type: 'blockContent',
         }),
         defineField({
+            name: 'services',
+            title: 'Services',
+            type: 'array',
+            of: [
+                {
+                    type: 'services'
+                }
+            ]
+        }),
+        defineField({
             name: 'seo',
             title: 'Search Engine Optimization',
             type: 'seo'
