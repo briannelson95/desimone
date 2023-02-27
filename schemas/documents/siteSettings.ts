@@ -22,6 +22,19 @@ export const siteSettings = defineType({
             type: 'contact'
         }),
         defineField({
+            name: 'navigation',
+            title: 'Navigation',
+            type: 'array',
+            of: [
+                {
+                    type: 'reference',
+                    to: [
+                        {type: 'pages'}
+                    ]
+                }
+            ]
+        }),
+        defineField({
             name: 'youtube',
             title: 'YouTube',
             type: 'url',

@@ -6,7 +6,7 @@ type Props = {
 
 const VideoBackground = ({ videoId }: Props) => {
     return (
-        <div className="relative top-0 left-0 h-full w-full z-[-1] overflow-hidden">
+        <div className="relative top-0 left-0 h-full w-full z-[-1] overflow-y-hidden">
             <video className="absolute -top-20 left-0 h-[125%] w-[125%]" autoPlay loop muted>
                 <source src="./background-video.mp4" type="video/mp4" />
             </video>
