@@ -8,11 +8,11 @@ import FeaturedVideos from '@/components/FeaturedVideos'
 export default async function Home() {
   const data = await client.fetch(homepage)
   const pageData = data.homePage[0];
-  // console.log(data.videos.allVideos)
+  // console.log(pageData.cta)
   
   return (
     <main>
-      <Hero title={data.siteSettings[0].title} />
+      <Hero title={data.siteSettings[0].title} cta={pageData.cta} />
       <section className='space-y-6'>
         <ServicesBar services={pageData.services} />
         <FeaturedVideos videos={data.videos.allVideos} />

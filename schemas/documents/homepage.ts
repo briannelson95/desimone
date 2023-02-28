@@ -24,6 +24,10 @@ export const homepage = defineType({
             readOnly: true
         }),
         defineField({
+            type: 'cta',
+            name: 'cta'
+        }),
+        defineField({
             name: 'featuredImage',
             title: 'Featured Image',
             type: 'reference',

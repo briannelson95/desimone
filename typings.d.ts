@@ -4,6 +4,8 @@ interface Navigation {
 }
 
 interface Slug {
+    slug?: any;
+    _type?: "slug"
     current: string
 }
 
@@ -24,4 +26,9 @@ interface Service {
 
 interface Video {
     url: string;
+}
+
+interface Cta {
+    title: string;
+    url: Slug
 }

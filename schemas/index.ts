@@ -13,6 +13,7 @@ import { contact } from "./objects/contact";
 import { seo } from "./objects/seo";
 import { homepage } from "./documents/homepage";
 import services from "./objects/services";
+import { cta } from "./objects/cta";
 
 
 export const schemaTypes = [
@@ -30,5 +31,6 @@ export const schemaTypes = [
     portfolio,
     contact,
     seo,
-    services
+    services,
+    cta,
 ]

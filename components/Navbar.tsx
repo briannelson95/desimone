@@ -42,7 +42,7 @@ export default function Navbar({ navigation, image }: Props) {
                         alt={'Nicholas Desimone Logo'}
                         height={100}
                         width={100}
-                        className='w-[124px] h-auto md:w-[222px] md:h-[126px]'                    
+                        className='w-[124px] h-auto md:w-[222px]'                    
                     />
                     {/* <div className='w-[222px] h-[126px] bg-white' /> */}
                 </li>

@@ -19,6 +19,12 @@ export const homepage = groq`{
         services[]{
             title,
             description
+        },
+        cta{
+            title,
+            url->{
+                slug
+            } 
         }
     },
     "videos": *[_type == "portfolio"][0]{
