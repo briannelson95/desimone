@@ -46,9 +46,9 @@ export default function Navbar({ navigation, image }: Props) {
 
     useEffect(() => {
         if (menuOpen) {
-            document.body.style.overflow = 'hidden';
+            document.getElementsByTagName('html')[0].style.overflow = 'hidden';
         } else {
-            document.body.style.overflow = 'unset';
+            document.getElementsByTagName('html')[0].style.overflow = 'unset';
         }
     }, [menuOpen])
 
