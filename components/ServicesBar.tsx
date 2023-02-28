@@ -1,10 +1,5 @@
 import React from 'react'
 
-interface Service {
-    description: string;
-    title: string;
-}
-
 type Props = {
     services: Service[]
 }

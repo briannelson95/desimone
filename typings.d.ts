@@ -16,3 +16,12 @@ interface Reference {
     _ref: string;
     _type: "reference"
 }
+
+interface Service {
+    description: string;
+    title: string;
+}
+
+interface Video {
+    url: string;
+}

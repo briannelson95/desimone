@@ -6,28 +6,9 @@ import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import { Bars2Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
-interface Navigation {
-    slug: Slug;
-    title: string;
-}
-
-interface Slug {
-    current: string
-}
-
-interface Image {
-    _type: "image";
-    asset: Reference;
-}
-
-interface Reference {
-    _ref: string;
-    _type: "reference"
-}
-
 type Props = {
-    navigation: Navigation[]
-    image: Image
+    navigation: Navigation[];
+    image: Image;
 }
 
 export default function Navbar({ navigation, image }: Props) {

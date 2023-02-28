@@ -1,10 +1,6 @@
 import React from 'react'
 import getYouTubeID from 'get-youtube-id';
 
-interface Video {
-  url: string;
-}
-
 type Props = {
   videos: Video[]
 }
