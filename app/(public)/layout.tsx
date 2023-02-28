@@ -3,6 +3,7 @@ import { Josefin_Sans, Oswald } from '@next/font/google';
 import Navbar from '@/components/Navbar';
 import { client } from '@/lib/sanity.client';
 import { siteSettings } from '@/lib/queries';
+import Footer from '@/components/Footer';
 
 const josefinSans = Josefin_Sans({
   subsets: ['latin'],
@@ -26,7 +27,8 @@ export default async function RootLayout({children,}: {children: React.ReactNode
       <body>
         <Navbar navigation={navigation} image={data[0].logo} />
         {children}
-        </body>
+        <Footer navigation={navigation} image={data[0].logo} />
+      </body>
     </html>
   )
 }

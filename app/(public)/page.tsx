@@ -13,9 +13,9 @@ export default async function Home() {
   return (
     <main>
       <Hero title={data.siteSettings[0].title} />
-      <section>
+      <section className='space-y-6'>
         <ServicesBar services={pageData.services} />
-        <FeaturedVideos />
+        <FeaturedVideos videos={data.videos.allVideos} />
       </section>
     </main>
   )
