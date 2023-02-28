@@ -19,7 +19,7 @@ const oswald = Oswald({
 export default async function RootLayout({children,}: {children: React.ReactNode}) {
   const data = await client.fetch(siteSettings);
   const navigation = data[0].navigation;
-  console.log(data)
+  // console.log(data)
   
   return (
     <html lang="en" className={`${josefinSans.variable} ${oswald.variable}`}>
