@@ -22,7 +22,7 @@ export default async function RootLayout({children,}: {children: React.ReactNode
   // console.log(data)
   
   return (
-    <html lang="en" className={`${josefinSans.variable} ${oswald.variable}`}>
+    <html lang="en" className={`${josefinSans.variable} ${oswald.variable} overflow-x-hidden`}>
       <body>
         <Navbar navigation={navigation} image={data[0].logo} />
         {children}

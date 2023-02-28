@@ -16,6 +16,7 @@ export const portfolio = defineType({
             name: 'allVideos',
             title: 'All Videos',
             type: 'videos',
+            description: "The first 3 videos will be used on the homepage as 'Featured Videos'."
         }),
     ],
 })
