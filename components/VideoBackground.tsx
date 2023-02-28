@@ -9,9 +9,16 @@ const VideoBackground = () => {
         <div 
             className="relative top-0 left-0 h-full w-full z-[-1] overflow-y-hidden"
             dangerouslySetInnerHTML={{ __html: `
-                <video class="absolute -top-20 left-0 h-[125%] w-[125%]" loop muted autoplay playsinline>
-                    <source src="./background-video.mp4" type="video/mp4" />
-                </video
+                <div>
+                    <video class="absolute left-0" loop muted autoplay playsinline>
+                        <source src="./background-video.mp4" type="video/mp4" />
+                    </video
+                </div>
+                <div>
+                    <video class="absolute left-0" loop muted autoplay playsinline>
+                        <source src="./background-video.mp4" type="video/mp4" />
+                    </video
+                </div>
             `}}
         >
             {/* <video 

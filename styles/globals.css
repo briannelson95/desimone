@@ -23,4 +23,12 @@ h1,h2,h3 {
   h2 {
     @apply text-3xl
   }
+
+  #desktop {
+    @apply hidden md:visible
+  }
+
+  #mobile {
+    @apply md:hidden
+  }
 }
