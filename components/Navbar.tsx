@@ -53,22 +53,22 @@ export default function Navbar({ navigation, image }: Props) {
     }, [menuOpen])
 
     return (
-        <nav className='w-full font-bold text-3xl md:text-base'>
-            <ul className='p-6 md:px-10 md:py-5 flex items-center uppercase justify-end relative'>
+        <nav className='w-full font-bold text-3xl md:text-base' id='top'>
+            <ul className='p-6 md:px-10 md:py-5 flex items-center uppercase justify-end relative z-[999]'>
                 <li className='first:mr-auto z-[999]'>
                     <Image
                         src={urlFor(image).url()} 
                         alt={'Nicholas Desimone Logo'}
                         height={100}
                         width={100}
-                        className='w-[124px] h-[69px] md:w-[222px] md:h-[126px]'                    
+                        className='w-[124px] h-auto md:w-[222px] md:h-[126px]'                    
                     />
                     {/* <div className='w-[222px] h-[126px] bg-white' /> */}
                 </li>
                 {/* <Bars2Icon className='md:hidden' height={40} width={40} onClick={() => setMenuOpen(!menuOpen)} /> */}
                 {icon}
                 <div className={`
-                    absolute top-24 left-0 bg-white w-full h-[calc(100vh-6rem)] duration-300 transition-all ease-in-out ${menuOpen ? 'opacity-100 translate-y-0 z-[888]' : 'opacity-0 -translate-y-full -z-10'}
+                    absolute top-24 left-0 bg-white w-full h-[calc(100vh-6rem)] duration-500 transition-all ease-in-out ${menuOpen ? 'opacity-100 translate-y-0 z-[888]' : 'opacity-0 -translate-y-full -z-10'}
                     md:static md:top-auto md:right-0 md:h-fit md:opacity-100 md:translate-y-0 md:flex md:justify-end
                 `}>
                     <div className='flex flex-col justify-center items-center h-full md:flex-row'>
