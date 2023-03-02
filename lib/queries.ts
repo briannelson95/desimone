@@ -33,3 +33,12 @@ export const homepage = groq`{
         }
     }
 }`
+
+export const portfolio = groq`{
+    "videos": *[_id == "portfolio"]{
+        allVideos[]{
+            url
+        }
+    },
+    "pageData": *[_type == "pages" && title == "Portfolio"]
+}`

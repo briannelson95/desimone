@@ -37,14 +37,15 @@ export default function Navbar({ navigation, image }: Props) {
         <nav className='w-full font-bold text-3xl md:text-base' id='top'>
             <ul className='p-6 md:px-10 md:py-5 flex items-center uppercase justify-end relative z-[999]'>
                 <li className='first:mr-auto z-[999]'>
-                    <Image
-                        src={urlFor(image).url()} 
-                        alt={'Nicholas Desimone Logo'}
-                        height={100}
-                        width={100}
-                        className='w-[124px] h-auto md:w-[222px]'                    
-                    />
-                    {/* <div className='w-[222px] h-[126px] bg-white' /> */}
+                    <Link href={'/'}>
+                        <Image
+                            src={urlFor(image).url()} 
+                            alt={'Nicholas Desimone Logo'}
+                            height={100}
+                            width={100}
+                            className='w-[124px] h-auto md:w-[222px]'                    
+                        />
+                    </Link>
                 </li>
                 {/* <Bars2Icon className='md:hidden' height={40} width={40} onClick={() => setMenuOpen(!menuOpen)} /> */}
                 {icon}
