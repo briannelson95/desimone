@@ -50,7 +50,8 @@ export const portfolio = groq`{
     "siteSettings": *[_id == "siteSettings"]{
         title,
         seo{
-            desc
+            desc,
+            image
         }
     }
 }`
