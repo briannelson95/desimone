@@ -41,5 +41,16 @@ export const portfolio = groq`{
             url
         }
     },
-    "pageData": *[_type == "pages" && title == "Portfolio"]
+    "pageData": *[_type == "pages" && title == "Portfolio"]{
+        ...,
+        featuredImage->{
+            media
+        }
+    },
+    "siteSettings": *[_id == "siteSettings"]{
+        title,
+        seo{
+            desc
+        }
+    }
 }`
