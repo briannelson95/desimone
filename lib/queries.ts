@@ -12,7 +12,8 @@ export const siteSettings = groq`
 
 export const homepage = groq`{
     "siteSettings": *[_type == "siteSettings"]{
-        title
+        title,
+        seo
     },
     "homePage": *[_type == "homepage"]{
         ...,

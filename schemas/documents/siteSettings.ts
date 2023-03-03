@@ -67,6 +67,13 @@ export const siteSettings = defineType({
             name: 'seo',
             title: 'Search Engine Optimization',
             type: 'seo'
+        }),
+        defineField({
+            name: 'indexSite',
+            title: 'Index Site',
+            type: 'boolean',
+            initialValue: false,
+            description: "When this is turned on, Google and other search engines will be able to see and show your site in search results. (Initial Value is false)"
         })
     ],
 })
