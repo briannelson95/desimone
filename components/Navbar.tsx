@@ -35,7 +35,7 @@ export default function Navbar({ navigation, image }: Props) {
 
     return (
         <nav className='w-full font-bold text-3xl md:text-base' id='top'>
-            <ul className='p-6 md:px-10 md:py-5 flex items-center uppercase justify-end relative z-[999]'>
+            <ul className='p-6 md:px-10 md:py-5 lg:px-32 flex items-center uppercase justify-end relative z-[999]'>
                 <li className='first:mr-auto z-[999]'>
                     <Link href={'/'}>
                         <Image

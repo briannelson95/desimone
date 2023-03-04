@@ -18,7 +18,7 @@ const Footer = ({navigation, image}: Props) => {
     }
 
     return (
-        <footer className="mt-6 px-10 py-4 pb-6 2xl:mx-52 flex flex-col items-center">
+        <footer className="mt-6 px-10 py-4 pb-6 lg:px-32 flex flex-col items-center">
             <hr className="w-4/5 pb-4 md:pb-16" />
             <nav className="hidden md:block mb-8 w-full">
                 <ul className='flex items-center mx-6 lg:mx-4'>

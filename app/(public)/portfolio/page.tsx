@@ -34,7 +34,7 @@ export default async function Portfolio() {
     const data = await client.fetch(portfolio);
     return (
         <main>
-            <div className='px-4 md:px-8'>
+            <div className='px-4 md:px-8 lg:px-32'>
                 <h1 className='text-2xl font-bold'>{data.pageData[0].title}</h1>
             </div>
             <FeaturedVideos videos={data.videos[0].allVideos} />
