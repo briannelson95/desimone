@@ -55,3 +55,11 @@ export const portfolio = groq`{
         }
     }
 }`
+
+export const contact = groq`{
+    "pageData": *[_type == "pages" && title == "Contact"],
+    "siteSettings": *[_id == "siteSettings"]{
+        contact,
+        seo
+    }
+}`
