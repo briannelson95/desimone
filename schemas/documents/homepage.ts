@@ -24,6 +24,16 @@ export const homepage = defineType({
             readOnly: true
         }),
         defineField({
+            name: 'desktopVideo',
+            title: 'Desktop Video',
+            type: 'file'
+        }),
+        defineField({
+            name: 'mobileVideo',
+            title: 'Mobile Video',
+            type: 'file'
+        }),
+        defineField({
             type: 'cta',
             name: 'cta'
         }),
@@ -57,6 +67,6 @@ export const homepage = defineType({
             name: 'seo',
             title: 'Search Engine Optimization',
             type: 'seo'
-        })
+        }),
     ],
 })

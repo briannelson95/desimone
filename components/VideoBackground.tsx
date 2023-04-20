@@ -4,14 +4,14 @@ type Props = {
     videoId: string
 }
 
-const VideoBackground = () => {
+const VideoBackground = ({desktop, mobile}: any) => {
     return (
         <div 
             className="relative top-0 left-0 h-full w-full z-[-1] overflow-y-hidden"
             dangerouslySetInnerHTML={{ __html: `
                 <div>
                     <video class="absolute w-full left-0" loop muted autoplay playsinline>
-                        <source src="./background-video.mp4" type="video/mp4" />
+                        <source src="https://cdn.sanity.io/files/syh87i8h/production/47740fc24044f7eb3d41e769370318a0b20be483.mp4" type="video/mp4" />
                     </video
                 </div>
                 <div>

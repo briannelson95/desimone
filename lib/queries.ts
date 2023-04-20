@@ -26,7 +26,9 @@ export const homepage = groq`{
             url->{
                 slug
             } 
-        }
+        },
+        "desktop": desktopVideo.asset->url,
+        "mobile": mobileVideo.asset->url,
     },
     "videos": *[_type == "portfolio"][0]{
         allVideos[0...3]{
