@@ -5,17 +5,6 @@ import urlFor from '@/lib/urlFor';
 import { groq } from 'next-sanity';
 import React from 'react';
 
-export async function generateStaticParams() {
-  const query = groq`*[_type == "page" && title == "Portfolio"]{ slug }`;
-
-  const slugs: any[] = await client.fetch(query);
-  const slugRoutes = slugs.map((slug) => slug.slug.current);
-
-  return slugRoutes.map((slug) => ({
-      slug
-  }))
-}
-
 export async function generateMetadata() {
   const data = await client.fetch(portfolio);
   const settings = data.siteSettings[0]
