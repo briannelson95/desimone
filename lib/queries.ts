@@ -65,3 +65,11 @@ export const contact = groq`{
         seo
     }
 }`
+
+export const allPages =  groq`
+    *[_type == 'pages' && slug.current == $slug][0]
+`
+
+export const allPosts = groq`
+    *[_type == 'post' && slug.current == $slug][0]
+`
