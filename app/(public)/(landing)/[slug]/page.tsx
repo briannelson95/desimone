@@ -27,7 +27,7 @@ export default async function Page({params: {slug}}: PageProps) {
 
     return (
         <main className="px-4 md:px-8 lg:px-32">
-            <h1>New page</h1>
+            <h1>{page.title}</h1>
             <section>
                 {page.body ?
                     <PortableText value={page.body} components={RichTextComponent} />
