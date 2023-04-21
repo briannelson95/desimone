@@ -5,30 +5,41 @@ import urlFor from '@/lib/urlFor';
 import React from 'react';
 
 export async function generateMetadata() {
-    const data = await client.fetch(portfolio);
-    const title = data.pageData[0].seo.title ? `${data.pageData[0].seo.title} - ${data.siteSettings[0].title}` : `${data.pageData[0].title} - ${data.siteSettings[0].title}`;
-    const description = data.pageData[0].seo.desc ? data.pageData[0].seo.desc : data.siteSettings[0].seo.desc;
-    const image = data.pageData[0].seo.image ? `${urlFor(data.pageData[0].seo.image).url()}` : data.pageData[0].featuredImage ? `${urlFor(data.pageData[0].featuredImage.media.image).url()}` : `${urlFor(data.siteSettings[0].seo.image).url()}`;
-
-    return {
-      title,
-      description,
-      openGraph: {
-        siteName: data.siteSettings[0].title,
-        title,
-        description,
-        images: [
-          {
-            url: image,
-            width: 800,
-            height: 600,
-          },
-        ],
-        locale: 'en-US',
-        type: 'website',
+  const data = await client.fetch(portfolio);
+  const settings = data.siteSettings[0]
+  const seo = data.pageData[0].seo ? data.pageData[0].seo : data.siteSettings[0].seo;
+  return {
+    title: seo.title ? seo.title : settings.title,
+    description: seo.desc ? seo.desc : settings.seo.desc,
+    openGraph: {
+      siteName: settings.title,
+      title: seo.title ? seo.title : settings.seo.title,
+      description: seo.desc ? seo.desc : settings.seo.desc,
+      images: [
+        {
+          url: `${urlFor(seo.image ? seo.image : settings.seo.image).url()}`,
+          width: 800,
+          height: 600,
+        },
+      ],
+      locale: 'en-US',
+      type: 'website',
+    },
+    robots: {
+      index: seo.indexPage ? seo.indexPage : settings.seo.indexPage,
+      follow: settings.indexSite,
+      nocache: seo.indexPage ? seo.indexPage : settings.seo.indexPage,
+      googleBot: {
+        index: seo.indexPage ? seo.indexPage : settings.seo.indexPage,
+        follow: seo.indexPage ? seo.indexPage : settings.seo.indexPage,
+        noimageindex: seo.indexPage ? !seo.indexPage : !settings.seo.indexPage,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
       },
-    }
+    },
   }
+}
 
 export default async function Portfolio() {
     const data = await client.fetch(portfolio);

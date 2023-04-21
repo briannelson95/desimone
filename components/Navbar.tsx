@@ -55,7 +55,7 @@ export default function Navbar({ navigation, image }: Props) {
                 `}>
                     <div className='flex flex-col justify-center items-center h-full md:flex-row'>
                         {navigation.map((item, index) => (
-                            <li key={index} className='py-3 md:px-5'>
+                            <li key={index} className='py-3 md:px-5' onClick={handleClose}>
                                 <Link href={`/${item.slug.current}`}>{item.title}</Link>
                             </li>
                         ))}
