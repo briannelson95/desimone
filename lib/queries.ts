@@ -67,7 +67,7 @@ export const contact = groq`{
 }`
 
 export const allPages =  groq`
-    *[_type == 'pages' && slug.current == $slug][0]
+    *[_type == 'pages' && !(slug.current match "portfolio") && !(slug.current match "contact") && slug.current == $slug][0]
 `
 
 export const allPosts = groq`
