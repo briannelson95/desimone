@@ -46,8 +46,10 @@ export default async function Contact() {
     const settings = data.siteSettings[0];
 
     return (
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-10 px-4 md:px-8 lg:px-32'>
-            <ContactForm />
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-10 px-4 md:px-8 lg:px-32'>
+            <div className='col-span-2'>
+              <ContactForm />
+            </div>
             <div>
                 <h2 className='text-xl font-bold'>Email:</h2>
                 <a href={`mailto:${settings.contact.email}`} className="underline">

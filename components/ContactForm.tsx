@@ -43,7 +43,7 @@ export default function ContactForm() {
 
     return (
         <div>
-            <form className='flex flex-col p-8'>
+            <form className='flex flex-col px-8'>
                 <h1 className='text-2xl font-bold'>Send a message</h1>
 
                 <label htmlFor='fullname' className='font-light mt-8'>
