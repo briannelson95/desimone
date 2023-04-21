@@ -23,8 +23,6 @@ export default async function Page({params: {slug}}: PageProps) {
         notFound()
     }
 
-    console.log(page)
-
     return (
         <main className="px-4 md:px-8 lg:px-32">
             <h1>{page.title}</h1>
