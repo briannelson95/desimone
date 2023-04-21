@@ -5,12 +5,6 @@ import { PortableText } from "@portabletext/react";
 import { groq } from "next-sanity"
 import { notFound } from "next/navigation";
 
-type Props = {
-    params: {
-        slug: string
-    }
-}
-
 export async function generateStaticParams() {
     const query = groq`*[_type == "pages"]{ slug }`;
 
@@ -22,7 +16,7 @@ export async function generateStaticParams() {
     }))
 }
 
-export default async function Page({params: {slug}}: Props) {
+export default async function Page({params: {slug}}: PageProps) {
     const page: any = await client.fetch(allPages, { slug });
 
     if (!page) {

@@ -32,3 +32,9 @@ interface Cta {
     title: string;
     url: Slug
 }
+
+type PageProps = {
+    params: {
+        slug: string
+    }
+}
